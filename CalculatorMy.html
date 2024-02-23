@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Style for calculator buttons */
+        button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output"></div>
+    <br>
+    <!-- Calculator buttons -->
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <br>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendNumber('0')">0</button>
+    <br>
+    <button onclick="appendOperator('+')">+</button>
+    <button onclick="appendOperator('-')">-</button>
+    <button onclick="appendOperator('*')">x</button>
+    <button onclick="appendOperator('/')">÷</button>
+    <button onclick="calculate()">=</button>
+
+    <script>
+        // Function to append numbers to the output
+        function appendNumber(number) {
+            document.getElementById('output').innerText += number;
+        }
+
+        // Function to append operators to the output
+        function appendOperator(operator) {
+            document.getElementById('output').innerText += operator;
+        }
+
+        // Function to calculate the result
+        function calculate() {
+            var expression = document.getElementById('output').innerText;
+            var result = eval(expression);
+            document.getElementById('output').innerText = result;
+        }
+         //i don't know what is the "appendNumber" is.and i didn't get the system in this code.
+    </script>
+</body>
+
+</html>
